@@ -1,4 +1,4 @@
-package com.curso.ecommerce.controller;
+package com.curso.ecommerce.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.curso.ecommerce.model.Orden;
-import com.curso.ecommerce.model.Usuario;
-import com.curso.ecommerce.service.IOrdenService;
-import com.curso.ecommerce.service.IUsuarioService;
+import com.curso.ecommerce.entities.Orden;
+import com.curso.ecommerce.entities.Usuario;
+import com.curso.ecommerce.services.IOrdenService;
+import com.curso.ecommerce.services.IUsuarioService;
 
 @Controller
 @RequestMapping("/usuario")

@@ -1,4 +1,4 @@
-package com.curso.ecommerce.controller;
+package com.curso.ecommerce.controllers;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -16,12 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.curso.ecommerce.model.Producto;
-import com.curso.ecommerce.model.Usuario;
-import com.curso.ecommerce.service.IUsuarioService;
-import com.curso.ecommerce.service.ProductoService;
-import com.curso.ecommerce.service.UploadFileService;
-import com.curso.ecommerce.service.UsuarioServiceImpl;
+import com.curso.ecommerce.entities.Producto;
+import com.curso.ecommerce.entities.Usuario;
+import com.curso.ecommerce.services.IUsuarioService;
+import com.curso.ecommerce.services.ProductoService;
+import com.curso.ecommerce.services.UploadFileService;
 
 @Controller
 @RequestMapping("/productos")

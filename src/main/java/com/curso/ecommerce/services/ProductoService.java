@@ -1,9 +1,9 @@
-package com.curso.ecommerce.service;
+package com.curso.ecommerce.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.curso.ecommerce.model.Producto;
+import com.curso.ecommerce.entities.Producto;
 
 public interface ProductoService {
 	public Producto save( Producto producto);

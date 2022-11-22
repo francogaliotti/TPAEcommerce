@@ -1,4 +1,4 @@
-package com.curso.ecommerce.service;
+package com.curso.ecommerce.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.curso.ecommerce.model.Orden;
-import com.curso.ecommerce.model.Usuario;
-import com.curso.ecommerce.repository.IOrdenRepository;
+import com.curso.ecommerce.entities.Orden;
+import com.curso.ecommerce.entities.Usuario;
+import com.curso.ecommerce.repositories.IOrdenRepository;
 
 @Service
 public class OrdenServiceImpl implements IOrdenService {

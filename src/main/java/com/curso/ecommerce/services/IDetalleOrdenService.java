@@ -1,6 +1,6 @@
-package com.curso.ecommerce.service;
+package com.curso.ecommerce.services;
 
-import com.curso.ecommerce.model.DetalleOrden;
+import com.curso.ecommerce.entities.DetalleOrden;
 
 public interface IDetalleOrdenService {
 	DetalleOrden save (DetalleOrden detalleOrden);

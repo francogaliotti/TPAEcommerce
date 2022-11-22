@@ -1,9 +1,9 @@
-package com.curso.ecommerce.service;
+package com.curso.ecommerce.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.curso.ecommerce.model.Usuario;
+import com.curso.ecommerce.entities.Usuario;
 
 public interface IUsuarioService {
 	List<Usuario> findAll();

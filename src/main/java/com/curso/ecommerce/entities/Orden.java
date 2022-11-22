@@ -1,21 +1,13 @@
-package com.curso.ecommerce.model;
+package com.curso.ecommerce.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.envers.Audited;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "ordenes")
@@ -23,7 +15,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Getter
 @Setter
-@Audited
+//@Audited
 public class Orden {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

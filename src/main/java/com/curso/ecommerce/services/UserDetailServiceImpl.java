@@ -1,4 +1,4 @@
-package com.curso.ecommerce.service;
+package com.curso.ecommerce.services;
 
 import java.util.Optional;
 
@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.curso.ecommerce.model.Usuario;
+import com.curso.ecommerce.entities.Usuario;
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService{

@@ -1,10 +1,9 @@
-package com.curso.ecommerce.controller;
+package com.curso.ecommerce.controllers;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpSession;
@@ -20,14 +19,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.curso.ecommerce.model.DetalleOrden;
-import com.curso.ecommerce.model.Orden;
-import com.curso.ecommerce.model.Producto;
-import com.curso.ecommerce.model.Usuario;
-import com.curso.ecommerce.service.IDetalleOrdenService;
-import com.curso.ecommerce.service.IOrdenService;
-import com.curso.ecommerce.service.IUsuarioService;
-import com.curso.ecommerce.service.ProductoService;
+import com.curso.ecommerce.entities.DetalleOrden;
+import com.curso.ecommerce.entities.Orden;
+import com.curso.ecommerce.entities.Producto;
+import com.curso.ecommerce.entities.Usuario;
+import com.curso.ecommerce.services.IDetalleOrdenService;
+import com.curso.ecommerce.services.IOrdenService;
+import com.curso.ecommerce.services.IUsuarioService;
+import com.curso.ecommerce.services.ProductoService;
 
 @Controller
 @RequestMapping("/")
