@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.myPhoneStore.entities.Orden;
 import com.myPhoneStore.entities.Producto;
+import com.myPhoneStore.entities.Usuario;
 import com.myPhoneStore.services.OrdenService;
 import com.myPhoneStore.services.UsuarioService;
 import com.myPhoneStore.services.ProductoService;
+import com.myPhoneStore.services.UsuarioServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/administrador")
-public class AdministradorController {
+public class AdministradorController extends BaseControllerImpl<Usuario, UsuarioServiceImpl> {
 
 	@Autowired
 	private ProductoService productoService;

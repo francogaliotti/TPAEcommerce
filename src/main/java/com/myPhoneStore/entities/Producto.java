@@ -15,10 +15,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Audited
-public class Producto {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+public class Producto extends Base {
+
 	private String nombre;
 	private String descripcion;
 	private String imagen;
@@ -32,11 +30,7 @@ public class Producto {
 
 
 
-	@Override
-	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
-				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
-	}
+
 	
 	
 }

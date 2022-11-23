@@ -68,8 +68,8 @@ public class HomeController {
 	@GetMapping("productohome/{id}")
 	public String productoHome(@PathVariable Integer id, Model model) {
 		log.info("Id producto enviado como parámetro {}", id);
-		Producto producto = new Producto();
-		Optional<Producto> productoOptional = productoService.get(id);
+		Usuario producto = new Usuario();
+		Optional<Usuario> productoOptional = productoService.get(id);
 		producto = productoOptional.get();
 
 		model.addAttribute("producto", producto);
@@ -80,10 +80,10 @@ public class HomeController {
 	@PostMapping("/cart")
 	public String addCart(@RequestParam Integer id, @RequestParam Integer cantidad, Model model) {
 		DetalleOrden detalleOrden = new DetalleOrden();
-		Producto producto = new Producto();
+		Usuario producto = new Producto();
 		double sumaTotal = 0;
 
-		Optional<Producto> optionalProducto = productoService.get(id);
+		Optional<Usuario> optionalProducto = productoService.get(id);
 		log.info("Producto añadido: {}", optionalProducto.get());
 		log.info("Cantidad: {}", cantidad);
 		producto = optionalProducto.get();
@@ -95,7 +95,7 @@ public class HomeController {
 		detalleOrden.setProducto(producto);
 		
 		//validar que le producto no se añada 2 veces
-		Integer idProducto=producto.getId();
+		Integer idProducto= Math.toIntExact(producto.getId());
 		boolean ingresado=detalles.stream().anyMatch(p -> p.getProducto().getId()==idProducto);
 		
 		if (!ingresado) {
