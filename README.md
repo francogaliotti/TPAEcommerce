@@ -1,10 +1,24 @@
-# spring-ecommerce
-Curso spring ecommerce básico
+### MyPhone-Store-V2
 
-- Accede al curso Aprende a desarrollar un sitio ecommerce con Spring Boot (Mejorado): https://github.com/elivarl/springboot-ecommerce-course-detail
+Es un proyecto de estudio para la materia de Taller de programación avanzada donde se explora y estudiara Java junto a SQL al igual que tecnologías como pueden ser	Spring Boot o Envers
 
-Proyecto Spring Framework, Spring Boot, Servicios REST, Thymeleaf, Spring MVC, Spring Data JPA, Spring Security y deployment en Digital Ocean
+## Descripción
 
-Curso en Youtube: https://www.youtube.com/playlist?list=PL3vxkSlW2FvU9z7Gz_Nn3E69HjEvv55_G
+MyPhone-Store es una tienda web dedicada a la venta de celulares y algunos de sus accesorios, donde los usuarios o consumidores podrán explorar entre la variedad que tendremos.
 
+## Publico objetivo
 
+La tienda esta dirigida hacia el publico en general, tanto como publico especializado
+
+## Integrantes del grupo The Crew:
+
+Javier Bagatoli : Estudiante avanzado de la carrera ingeniería en sistemas de información.
+
+Ariel Mercado : Estudiante avanzado de la carrera con interés en las nuevas tecnologías.
+
+Franco Galiotti : Abierto a nuevos desafios.
+
+Carlos Gutierrez : Estudiante de la carrera ingeniería en sistemas, optimista.
+
+### Prototipo de MyPhone Store
+<a href="https://www.figma.com/proto/RDDJS4vEcXatX44gWVKo1W/MyPhone-Store?node-id=39%3A192&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A3"> Prototipo creado en Figma</a>
