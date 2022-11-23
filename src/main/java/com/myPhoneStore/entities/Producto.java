@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Getter
 @Setter
-//@Audited
+@Audited
 public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
