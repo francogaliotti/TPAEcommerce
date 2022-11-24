@@ -7,9 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import com.myPhoneStore.entities.Producto;
 import com.myPhoneStore.entities.Usuario;
-import com.myPhoneStore.services.UsuarioService;
-import com.myPhoneStore.services.ProductoService;
-import com.myPhoneStore.services.UploadFileService;
+import com.myPhoneStore.services.*;
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/productos")
-public class ProductoController {
+public class ProductoController extends BaseControllerImpl<Producto, ProductoServiceImpl>{
 	
 	private final Logger LOGGER = LoggerFactory.getLogger(ProductoController.class);
 	
@@ -69,8 +67,8 @@ public class ProductoController {
 	
 	@GetMapping("/edit/{id}")
 	public String edit(@PathVariable Integer id, Model model) {
-		Producto producto= new Producto();
-		Optional<Producto> optionalProducto=productoService.get(id);
+		Usuario producto= new Usuario();
+		Optional<Usuario> optionalProducto=productoService.get(id);
 		producto= optionalProducto.get();
 		
 		LOGGER.info("Producto buscado: {}",producto);
@@ -88,7 +86,7 @@ public class ProductoController {
 			
 			producto.setImagen(p.getImagen());
 		}else {// cuando se edita tbn la imagen			
-			//eliminar cuando no sea la imagen por defecto
+			//eliminar cuando no sea la imagen por defect
 			if (!p.getImagen().equals("default.jpg")) {
 				upload.deleteImage(p.getImagen());
 			}

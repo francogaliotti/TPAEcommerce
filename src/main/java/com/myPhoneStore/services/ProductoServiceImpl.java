@@ -4,16 +4,39 @@ import java.util.List;
 import java.util.Optional;
 
 import com.myPhoneStore.entities.Producto;
+import com.myPhoneStore.entities.Usuario;
+import com.myPhoneStore.repositories.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.myPhoneStore.repositories.IProductoRepository;
+import com.myPhoneStore.repositories.ProductoRepository;
 
 @Service
-public class ProductoServiceImpl implements ProductoService{
+public class ProductoServiceImpl extends BaseServiceImpl<Producto, Long> implements ProductoService{
 	
 	@Autowired
-	private IProductoRepository productoRepository;
+	private ProductoRepository productoRepository;
+
+	public ProductoServiceImpl(BaseRepository<Producto, Long> baseRepository) {
+		super(baseRepository);
+	}
+
+	@Override
+	public List<Producto> findall() throws Exception {
+		return null;
+	}
+
+	@Override
+	public Page<Producto> findall(Pageable pageable) throws Exception {
+		return null;
+	}
+
+	@Override
+	public Producto findById(Long aLong) throws Exception {
+		return null;
+	}
 
 	@Override
 	public Producto save(Producto producto) {
@@ -21,7 +44,17 @@ public class ProductoServiceImpl implements ProductoService{
 	}
 
 	@Override
-	public Optional<Producto> get(Integer id) {
+	public Producto update(Long aLong, Producto entity) throws Exception {
+		return null;
+	}
+
+	@Override
+	public boolean delete(Long aLong) throws Exception {
+		return false;
+	}
+
+	@Override
+	public Optional<Usuario> get(Integer id) {
 		return productoRepository.findById(id);
 	}
 

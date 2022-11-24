@@ -9,9 +9,12 @@ import com.myPhoneStore.entities.Orden;
 import com.myPhoneStore.entities.Usuario;
 import com.myPhoneStore.services.OrdenService;
 import com.myPhoneStore.services.UsuarioService;
+import com.myPhoneStore.services.UsuarioServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/usuario")
-public class UsuarioController {
+public class UsuarioController extends BaseControllerImpl<Usuario, UsuarioServiceImpl>{
 	
 	private final Logger logger= LoggerFactory.getLogger(UsuarioController.class);
 	
@@ -42,12 +45,12 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/save")
-	public String save(Usuario usuario) {
+	public ResponseEntity<?> save(Usuario usuario) {
 		logger.info("Usuario registro: {}", usuario);
 		usuario.setTipo("USER");
 		usuario.setPassword( passEncode.encode(usuario.getPassword()));
 		usuarioService.save(usuario);		
-		return "redirect:/";
+		return (ResponseEntity<?>) ResponseEntity.status(HttpStatus.OK);
 	}
 	
 	@GetMapping("/login")

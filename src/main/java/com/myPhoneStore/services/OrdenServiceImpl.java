@@ -7,19 +7,46 @@ import java.util.Optional;
 import com.myPhoneStore.entities.Orden;
 import com.myPhoneStore.entities.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.myPhoneStore.repositories.IOrdenRepository;
+import com.myPhoneStore.repositories.OrdenRepository;
 
 @Service
 public class OrdenServiceImpl implements OrdenService {
 	
 	@Autowired
-	private IOrdenRepository ordenRepository;
+	private OrdenRepository ordenRepository;
+
+	@Override
+	public List<Orden> findall() throws Exception {
+		return null;
+	}
+
+	@Override
+	public Page<Orden> findall(Pageable pageable) throws Exception {
+		return null;
+	}
+
+	@Override
+	public Orden findById(Long aLong) throws Exception {
+		return null;
+	}
 
 	@Override
 	public Orden save(Orden orden) {
 		return ordenRepository.save(orden);
+	}
+
+	@Override
+	public Orden update(Long aLong, Orden entity) throws Exception {
+		return null;
+	}
+
+	@Override
+	public boolean delete(Long aLong) throws Exception {
+		return false;
 	}
 
 	@Override
@@ -63,7 +90,7 @@ public class OrdenServiceImpl implements OrdenService {
 	}
 
 	@Override
-	public Optional<Orden> findById(Integer id) {
+	public Optional<Usuario> findById(Integer id) {
 		return ordenRepository.findById(id);
 	}
 

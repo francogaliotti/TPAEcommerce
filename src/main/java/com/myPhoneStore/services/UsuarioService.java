@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.myPhoneStore.entities.Usuario;
 
-public interface UsuarioService {
+public interface UsuarioService extends BaseService<Usuario, Long>{
 	List<Usuario> findAll();
 	Optional<Usuario> findById(Integer id);
 	Usuario save (Usuario usuario);
